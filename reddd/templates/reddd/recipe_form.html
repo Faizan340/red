@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    
+  </head>
+  <body>
+    
+
+
+    <div class = "center">
+        <h1>CREATE A RECIPE</h1><hr>
+        <form method = "POST" enctype = "multipart/form-data">
+            {% csrf_token%}
+            <div class="form-group">
+            {{form.as_p}}
+            </div>
+            <input type = "submit" value ="Submit">
+        </form>
+        <hr><h3><a href = {% url 'reddd:recipelist'  %}>Recipe List</a><h3>
+    </div>
+
+    <style>
+        h1{
+            font-family: "Times New Roman", Times, serif;
+        }
+        .center {
+            border: 5px solid;
+            margin: auto;
+            width: 50%;
+            padding: 10px;
+          }
+            input[type=submit]{
+             background-color: #04AA6D;
+             border: none;
+             border-radius:25px;
+             color: white;
+             padding: 16px 32px;
+             text-decoration: none;
+             margin: 4px 2px;
+             cursor: pointer;
+           }
+    </style>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
